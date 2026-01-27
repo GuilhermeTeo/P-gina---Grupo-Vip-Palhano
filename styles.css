@@ -1,0 +1,241 @@
+:root {
+  --primary-blue: #003366; /* Azul Escuro (Logo/Textos) */
+  --hero-bg: #000000; /* Preto (Fundo Hero) */
+  --gold: #add8e6; /* Azul Claro (Harmonia com o tema náutico) */
+  --green: #25d366; /* Verde WhatsApp */
+  --green-hover: #1ebc57;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --white: #ffffff;
+  --bg-light: #f4f7f6; /* Cinza bem claro para seções alternadas */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Header */
+.main-header {
+  background: var(--white);
+  padding: 15px 0; /* Padding reduzido para a logo */
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 80px;
+  width: auto;
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background-color: var(--hero-bg);
+  color: var(--white);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.hero-subtitle {
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+  color: #e0e0e0;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--green);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 15px 40px;
+  border-radius: 50px;
+  transition:
+    background 0.3s,
+    transform 0.2s;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+.cta-button:hover {
+  background-color: var(--green-hover);
+  transform: translateY(-2px);
+}
+
+.cta-button i {
+  margin-right: 8px;
+  color: var(--white);
+}
+
+.hero-footer {
+  font-size: 0.85rem;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+/* Benefits Section */
+.benefits {
+  padding: 80px 0 60px;
+  background-color: var(--bg-light); /* Fundo cinza claro */
+  text-align: center;
+}
+
+.section-title {
+  color: var(--primary-blue);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.cards-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.benefit-card {
+  background: var(--white);
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  transition: transform 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  font-size: 2.5rem;
+  color: var(--primary-blue); /* Mantido azul escuro para contraste */
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  color: var(--text-dark);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  padding: 80px 0;
+  background-color: var(--white);
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.address {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* Botão secundário mantém o estilo padrão */
+.cta-button.dark {
+  /* Herda o verde padrão */
+}
+
+/* Footer (Caso seja readicionado no futuro) */
+.main-footer {
+  background-color: #002244;
+  color: var(--white);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.social-icons a {
+  color: var(--white);
+  font-size: 1.5rem;
+  margin: 0 10px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
